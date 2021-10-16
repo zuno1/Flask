@@ -1,0 +1,111 @@
+{% extends "master_template.html" %}
+{%block title%}
+
+  This is Intro
+{%endblock%}
+
+{% block body%}
+  
+<head>
+ 
+<link rel="stylesheet" href="{{url_for ('static', filename='index.css')}}">
+ 	
+
+	
+  <title>Vaccine Management System</title>
+  
+  
+	<header> 
+ 
+ <!-- main heading website/ website name -->
+ 
+
+  <div>
+   
+	<article id="main">
+
+<section>
+ 
+<img src="{{url_for ('static', filename='logo vaccine.png')}}" alt= "vaccine img"width="55px" height="55px" />
+
+ </section>
+
+<section>
+ 
+<h1 class="heading"> Vaccine Management System </h1>
+ 
+</section>
+</article>
+  </div>
+   
+  
+ </header>
+ 
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #20706f;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+</style>
+</head>
+<body>
+
+ <table class="table">
+   
+ <thead>
+  
+    <tr style="text-align: center;">
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Father Name</th>
+      <th>CINC</th>
+      <th>Phone Number</th>
+      <th>Vaccine Dose</th>
+      <th>Age</th>
+      <th>Vaccine</th>
+      <th>City</th>
+      <th>Gender</th>
+      <th>Vaccine Date</th>
+     <th> ACTION </th>
+    </tr>
+ </thead>
+  <tbody>  
+  {%for stud in students%}
+  <tr style="text-align: center;">  
+    <td>{{stud.f_name}}</td>
+    <td>{{stud.l_name}}</td>
+    <td>{{stud.fathername}}</td>
+    <td>{{stud.cnic}}</td>
+    <td>{{stud.p_num}}</td>
+    <td>{{stud.dose}}</td>
+    <td>{{stud.age}}</td>
+    <td>{{stud.V_name}}</td>
+    <td>{{stud.city}}</td>
+    <td>{{stud.sex}}</td>
+    <td>{{stud.date}}</td>
+    <td><a href="/update/{{stud.id}}">update</a>, <a href="/delete/{{stud.id}}">delete</a>
+</td>
+   
+   </tr>
+   
+   {%endfor%}
+   
+ </tbody>
+ 
+ </table>
+ 
+ {%endblock%}
+
+
+

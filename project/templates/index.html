@@ -1,0 +1,110 @@
+{% extends "master_template.html" %}
+  {%block title%}
+    This is the Main Index Page
+  {%endblock%}
+<html>
+<head> 
+  <link rel="stylesheet" href="{{url_for ('static', filename='index.css')}}">
+  <title>Vaccine Management System</title>
+<header> 
+    <!-- main heading website/ website name -->
+    <div>
+    <article id="main">
+    <section>
+        <a href="{{url_for ('static', filename='logo vaccine.png')}}" alt= "vaccine img"> 
+        <img src="{{url_for ('static', filename='logo vaccine.png')}}" alt= "vaccine img"width="55px" height="55px" />
+    </section>
+    <section>
+        <h1 class="heading"> Vaccine Management System </h1>
+    </section>
+    </article>
+    </div>
+    <!-- title into header section-->
+    <div>
+        <h1 id="home" class="serif">
+        <marquee direction="left"> Time To Vaccinate </marquee> </h1>
+    </div>
+</header>
+</head>
+{%block body%}
+<body>
+  <main>
+  <div>
+ 
+<article id="main">
+	<section id="about">
+
+ <!-- add image link -->
+ 	
+<div>
+
+ <a href="{{url_for ('static', filename='time to vaccinate.png')}}" alt= "vaccine img"> 
+<img src="{{url_for ('static', filename='time to vaccinate.png')}}"  alt= "vaccine img"width="700px" height="385px" />
+
+</a> 
+
+</div>
+
+
+</section>
+
+
+<!-- add image link -->
+	
+ 
+	<div>
+ 
+<section>
+	    <h1 id="about" class="city"> About benefits of Vaccination </h1>
+     
+       <p class="p1" > Vaccine management system is a system in which we maintain the data of vaccinated persons. People who got their covid-19 vaccine will be register in the database along with number of dosage and acquired vaccine.
+<br>
+
+Becoming fully vaccinated
+In general, people are considered fully vaccinated:
+2 weeks after their second dose in a 2-dose series, such as the Pfizer or Moderna vaccines, or
+2 weeks after a single-dose vaccine, such as Johnson & Johnson's Janssen vaccine
+If you have received 1 dose of a 2-dose series, you're considered partially vaccinated.
+Completing your vaccine series is important. Current evidence shows it takes:
+2 weeks or more after the first dose to provide good protection
+up to 2 weeks after the second dose to provide higher protection
+The effectiveness of a 2-dose vaccine series increases after the second dose. That's why it's important to return at the time advised by your local health authority for longer-lasting protection.
+You ll have very good protection against infection, including against most current variants of concern. However, as vaccines are rarely 100% effective, a small number (less than 1%) of fully vaccinated people may become infected with or without symptoms. As a result, you may still be asked to get a COVID-19 test.
+Becoming fully vaccinated
+
+</p>
+
+
+</div>
+
+
+ </section>
+
+</article>
+
+</body>
+
+
+
+<!-- footer section-->
+
+<hr>
+
+
+<footer class="footer">
+	<div>
+&copy; Copyright 2021 Vaccine Management System Developer Irfan Sohail  
+</div>
+
+</footer> 
+
+
+
+  
+  </body>
+  
+  </html>
+  
+
+{%endblock%}
+

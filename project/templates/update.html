@@ -1,0 +1,60 @@
+{% extends "master_template.html" %}
+    {%block title%}
+  
+  This is the Main Index Page
+  
+  {%endblock%}
+ 
+ {%block body%}
+<head>
+<link rel="stylesheet" href="{{url_for ('static', filename='index.css')}}">
+<title>Vaccine Management System</title>
+<header> 
+<!-- main heading website/ website name -->
+<div>
+<article id="main">
+<section>
+<img src="{{url_for ('static', filename='logo vaccine.png')}}" alt= "vaccine img"width="55px" height="55px" />
+</section>
+<section>
+<h1 class="heading"> Vaccine Management System </h1>
+</section>
+</article>
+</div>
+</header>
+</head>
+<!-- add image link -->
+<div>
+<img src="{{url_for ('static', filename='vaccine-low-res_2a9986e785.png')}}"  alt= "vaccine img"width="700px" height="385px" />
+</div>
+<div id="form3" class="fb-body">
+  <form class="form-horizontal" action="{{url_for('update', id = id)}}" method="post" >
+  <input  id="namebox" name="f_name" value="{{stud.f_name}}" required>
+  <input  id="namebox" name="l_name" value="{{stud.l_name}}"><br>
+  <input  id="namebox" name="fathername" value="{{stud.fathername}}"><br>
+  <input  id="namebox" name="cnic" value="{{stud.cnic}}"><br>
+  <input  id="namebox" name="p_num" value="{{stud.p_num}}"><br>
+  <input  id="namebox" name="dose" value="{{stud.dose}}"><br>
+  <input  id="namebox" name="age" value="{{stud.age}}"><br>
+  <input  id="namebox" name="city" value="{{stud.city}}"><br><br>
+    <select id="program" name="V_name">
+      <option value="{{stud.V_name}}"> Sinopharm </option>
+      <option value="{{stud.V_name}}"> Sinovac </option>
+      <option value="{{stud.V_name}}"> Sputnilk </option>
+      <option value="{{stud.V_name}}"> Astrazencca </option>
+    </select><br><br>
+    <button type="submit" class="button2">Submit</button>
+</form>
+</div><br><br>
+<div>
+<!-- footer section-->
+<hr>
+</div>
+<footer class="footer">
+<div>
+&copy; Copyright 2021 Vaccine Management System Developer Irfan Sohail  
+</div>
+</footer>
+</html>
+{%endblock%}
+

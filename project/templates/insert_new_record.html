@@ -1,0 +1,132 @@
+{% extends "master_template.html" %}
+    {%block title%}
+    This is the Main Index Page
+    {%endblock%}
+  {%block body%}
+  <link rel="stylesheet" href="{{url_for ('static', filename='index.css')}}">
+
+
+<head>
+
+<link rel="stylesheet" href="{{url_for ('static', filename='index.css')}}">
+
+
+
+  <title>Vaccine Management System</title>
+
+
+	<header>
+
+ <!-- main heading website/ website name -->
+
+
+  <div>
+
+	<article id="main">
+
+<section>
+
+<img src="{{url_for ('static', filename='logo vaccine.png')}}" alt= "vaccine img"width="55px" height="55px" />
+
+ </section>
+
+<section>
+
+<h1 class="heading"> Vaccine Management System </h1>
+
+</section>
+</article>
+  </div>
+
+
+ </header>
+
+
+	<br>
+<br>
+ 		<article id="main">
+	<section id="about">
+
+ <!-- add image link -->
+
+<div>
+
+
+<img src="{{url_for ('static', filename='vaccine-low-res_2a9986e785.png')}}"  alt= "vaccine img"width="700px" height="385px" />
+
+</a>
+
+</div>
+
+
+</section>
+   	<!-- main form section -->
+
+  <form action="{{url_for ('intro')}}" method="POST">
+        <div id="form3" class="fb-body">
+			    <input placeholder="First Name" type="text" id="namebox" name="f_name" required/>
+			    <input placeholder="Last Name" type="text" id="namebox" name="l_name" required/> <br>
+		      <input placeholder="Father Name" type="text" id="mailbox" name="fathername" required/><br>
+          <input placeholder="CNIC" type="number" id="mailbox" name="cnic" required/><br>
+	        <input placeholder="Phone Number" type="number" id="mailbox" name="p_num" required/><br>
+          <input placeholder="Vaccine Dose" type="number" id="mailbox" name="dose" required/><br>
+          <input placeholder="Age" type="number" id="mailbox" name="age" required/><br>
+          <input placeholder="City" type="text" id="mailbox" name="city" required/><br><br>
+	        <!-- <input placeholder="Vaccine date" type="date" id="namebox"  /><br><br> -->
+          <!-- <label class="control-label col-sm-2" for="program">Vaccine Name</label>-->
+        <div class="col-sm-10">
+
+          <select class="form3" id="program" name="V_name" required>
+
+            <option value="Sinopharm"> Sinopharm </option>
+
+            <option value="Sinovac"> Sinovac </option>
+
+            <option value="Sputnilk"> Sputnilk </option>
+
+            <option value="Astrazencca"> Astrazencca </option><br><br>
+          
+          </select>
+
+        </div><br><br>
+
+        <div class="form-group">
+          <input type="radio" id="r-b" name="sex" value="male" />Male
+
+	        <input type="radio" id="r-b" name="sex" value="female" />Female<br><br>
+        </div>
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="button2">Add Record</button>
+        </div>
+        </div>
+
+
+ </form>
+
+</article>
+  </body>
+
+<br><br>
+<br><br>
+<br><br><br><br>
+
+<div>
+<!-- footer section-->
+
+<hr>
+
+
+<footer class="footer">
+	<div>
+&copy; Copyright 2021 Vaccine Management System Developer Irfan Sohail
+</div>
+
+</footer>
+<div>
+
+
+
+
+  </html>
+
+{%endblock%}
